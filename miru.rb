@@ -5,20 +5,20 @@
 class Miru < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.mirurobotics.com"
-  version "0.9.2"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.9.2/cli_Darwin_x86_64.tar.gz"
-      sha256 "0201b98a2c22d28005efdcde02aa07d62f544208bdebfe0bd5cdddccf9994054"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Darwin_x86_64.tar.gz"
+      sha256 "47cde3c79129a173fcf711e9f3a3f2fb81e4a90d91a58035ae31dccb2721070e"
 
       define_method(:install) do
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.9.2/cli_Darwin_arm64.tar.gz"
-      sha256 "21b7d5a564398c873f16cb4082390eebd89b987eb3a839683c2bf64af1183e90"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Darwin_arm64.tar.gz"
+      sha256 "d1c3f69d1080610fb03d50915c39e9d686a24cd7307f5c82c6ddf6e4851e1793"
 
       define_method(:install) do
         bin.install "miru"
@@ -28,15 +28,15 @@ class Miru < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.9.2/cli_Linux_x86_64.tar.gz"
-      sha256 "8a20147031a395e1410296fef440558250ccb0f2775c4aba894b0971e5407f81"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Linux_x86_64.tar.gz"
+      sha256 "1e1a7e39f8e2fdb6d06bdfec1f180ecca08bb4f4eb97baf4cbfefc79783c3d7a"
       define_method(:install) do
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.9.2/cli_Linux_arm64.tar.gz"
-      sha256 "d614ff87d8d679a0982ccd3e140a876dfbdf9c1290dc4c1f2b4b584159832dc0"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Linux_arm64.tar.gz"
+      sha256 "7c7f4e07f791cbb83b1c7e4bec3a4dae24d40ac160962f0fd7ce725270f3b2e5"
       define_method(:install) do
         bin.install "miru"
       end
