@@ -5,22 +5,22 @@
 class Miru < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.mirurobotics.com"
-  version "0.10.0"
+  version "0.10.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "47cde3c79129a173fcf711e9f3a3f2fb81e4a90d91a58035ae31dccb2721070e"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.1/cli_Darwin_x86_64.tar.gz"
+      sha256 "00a98b4ea14fc13a59fb6173f95b24c3e8bce4a1ee6ee1fd75da65460870e9c2"
 
-      define_method(:install) do
+      def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Darwin_arm64.tar.gz"
-      sha256 "d1c3f69d1080610fb03d50915c39e9d686a24cd7307f5c82c6ddf6e4851e1793"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.1/cli_Darwin_arm64.tar.gz"
+      sha256 "830b9f79764946f58fb7a2e4a75f180f53944fe7ad33c1fa2fdb0e7e3bf0e16d"
 
-      define_method(:install) do
+      def install
         bin.install "miru"
       end
     end
@@ -28,16 +28,16 @@ class Miru < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Linux_x86_64.tar.gz"
-      sha256 "1e1a7e39f8e2fdb6d06bdfec1f180ecca08bb4f4eb97baf4cbfefc79783c3d7a"
-      define_method(:install) do
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.1/cli_Linux_x86_64.tar.gz"
+      sha256 "8f077ba0d38ebc611f2379f2e1decb28bdb02ab5614fb9132bb0a4a9a96b7aa7"
+      def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.10.0/cli_Linux_arm64.tar.gz"
-      sha256 "7c7f4e07f791cbb83b1c7e4bec3a4dae24d40ac160962f0fd7ce725270f3b2e5"
-      define_method(:install) do
+      url "https://github.com/mirurobotics/cli/releases/download/v0.10.1/cli_Linux_arm64.tar.gz"
+      sha256 "5506a68a91e18c10ccb92852a488a494fcc891b646957ee6dd438003eb5ed615"
+      def install
         bin.install "miru"
       end
     end
