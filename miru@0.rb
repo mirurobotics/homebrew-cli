@@ -5,20 +5,20 @@
 class MiruAT0 < Formula
   desc "Configuration management for Robotics"
   homepage "https://docs.mirurobotics.com"
-  version "0.12.0"
+  version "0.12.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.12.0/cli_Darwin_x86_64.tar.gz"
-      sha256 "2d2e80df5b2614c6f39e4af46f275f712bc4a34c74262885ee626bdc07d21845"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.12.1/cli_Darwin_x86_64.tar.gz"
+      sha256 "71c3e98afcd748c87d7baad46cc04a91fd084b5f4f1f267107b2fbfbec83674d"
 
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.12.0/cli_Darwin_arm64.tar.gz"
-      sha256 "a7d22698a734b918e65270372c0ea3d863d53fdaa757acc7c3c77573f10e763e"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.12.1/cli_Darwin_arm64.tar.gz"
+      sha256 "2f3c0a6eb42b696287c374ebb596ae76dbb0a883251a49ae5ddcecb3b5c69e5b"
 
       def install
         bin.install "miru"
@@ -28,15 +28,15 @@ class MiruAT0 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.12.0/cli_Linux_x86_64.tar.gz"
-      sha256 "d93e40e3113a2e4cb8b723e72e145a5708f58922860d1150ec4c571b2c161e6d"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.12.1/cli_Linux_x86_64.tar.gz"
+      sha256 "0ebdeb9798961a437bd53d6d178dfbd080af71e4cfb09c35f07fcd9302c359f0"
       def install
         bin.install "miru"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mirurobotics/cli/releases/download/v0.12.0/cli_Linux_arm64.tar.gz"
-      sha256 "6b04b46bff77fa5edaf058d83cd91061bfb9fed94ed4f89e892f661b0ce070b6"
+      url "https://github.com/mirurobotics/cli/releases/download/v0.12.1/cli_Linux_arm64.tar.gz"
+      sha256 "84da5c3e49b765d00d541bb07842686edd4e17ae072b7758f047147276399809"
       def install
         bin.install "miru"
       end
